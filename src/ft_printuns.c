@@ -31,19 +31,19 @@ char	*ft_utoa(unsigned int n)
 {
 	char	*nbr;
 	int		len;
-	int		i;
 
 	len = ft_nbrlen(n);
 	nbr = (char *)malloc(sizeof(char) * (len + 1));
 	if (!nbr)
 		return (0);
-	while (i < len)
-	{
-		nbr[i] = n / 10 + '0';
-		n %= 10;
-		i++;
-	}
 	nbr[len] = '\0';
+	len--;
+	while (len >= 0)
+	{
+		nbr[len] = n % 10 + '0';
+		n /= 10;
+		len--;
+	}
 	return (nbr);
 }
 

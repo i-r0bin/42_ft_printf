@@ -22,20 +22,6 @@
 #  define PTR_NULL "0x0"
 # endif
 
-/*typedef struct  s_flags
-{
-    va_list args;
-    int     spec;
-    int     width;
-    int     left;
-    int     zero;
-    int     star;
-    int     precision;
-    int     hash;
-    int     space;
-    int     plus;
-}       t_flags;*/
-
 int	ft_printf(const char *format, ...);
 int	ft_printchar(int c);
 int	ft_printstr(char *str);

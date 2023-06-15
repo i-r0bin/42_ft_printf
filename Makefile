@@ -49,7 +49,7 @@ $O%.o: $S%.c
 	$(CC) $(CFLAGS) -I$I -c $^ -o $@
 
 $(NAME): $(OBJ) $(LIBFT)
-	$(AR) $@ $<
+	$(AR) $@ $^
 
 clean:
 	make -C $(LIBFT_PATH) clean
